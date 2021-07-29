@@ -18,6 +18,14 @@ struct Surfspot : Hashable, Codable {
     var image: Image {
         Image(imageName)
     }
+    
+    var coordinates: Coordinates
+    
+    struct Coordinates: Hashable, Codable {
+        var longitude: Double
+        var latitude: Double
+    }
+
 }
 
 //

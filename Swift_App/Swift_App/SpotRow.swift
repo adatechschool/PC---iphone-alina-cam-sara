@@ -16,7 +16,7 @@ struct SpotRow: View {
                 .resizable()
                 .frame(width: 50, height: 50)
             Text(surfspot.name)
-            
+                
             Spacer()
         }
         
@@ -25,7 +25,10 @@ struct SpotRow: View {
 
 struct SpotRow_Previews: PreviewProvider {
     static var previews: some View {
-        SpotRow(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves"))
+        Group {
+            SpotRow(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves"))
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
     // le surfspot de la l28 est le même qu'à la l11
 }
