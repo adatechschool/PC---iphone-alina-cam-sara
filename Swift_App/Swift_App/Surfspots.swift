@@ -8,16 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct Surfspots : Hashable, Codable {
+struct Surfspot : Hashable, Codable {
     var id: Int
     var name: String
     var city: String
     var country: String
     
-//    private var imageName: String
-//    var image: Image {
-//        Image(imageName)
-//    }
+    var imageName: String
+    var image: Image {
+        Image(imageName)
+    }
 }
 
 //

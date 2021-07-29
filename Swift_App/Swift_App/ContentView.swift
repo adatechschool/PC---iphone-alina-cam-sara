@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var surfspot1 = Surfspots(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA")
+    var surfspot1 = Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves")
     
     var body: some View {
         VStack {
