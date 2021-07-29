@@ -26,7 +26,7 @@ struct SpotRow: View {
 struct SpotRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SpotRow(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves"))
+            SpotRow(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286)))
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

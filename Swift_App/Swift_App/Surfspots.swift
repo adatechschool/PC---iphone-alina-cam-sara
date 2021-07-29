@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 struct Surfspot : Hashable, Codable {
     var id: Int
@@ -27,9 +28,4 @@ struct Surfspot : Hashable, Codable {
     }
 
 }
-
-//
-//        Spots(id: <#ObjectIdentifier#>, name: "Wild Waves", country: "California, USA", city: "Santa Barbara", image: "wildwaves" as NSObject),
-//        Spots(id: <#ObjectIdentifier#>, name: "Palm Rock", country: "Hawai, USA", city: "Maui", image: "palmrocks" as NSObject),
-//        Spots(id: <#ObjectIdentifier#>, name: "Uluwatu", country: "Indonesia", city: "Bali", image: "uluwatu" as NSObject)
 

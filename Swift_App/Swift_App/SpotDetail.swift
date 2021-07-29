@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct SpotDetail: View {
     var surfspot: Surfspot
     
     var body: some View {
-        VStack {
-            MapView(coordinate: surfspot.locationCoordinate)
+        ScrollView {
+            MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.coordinates.latitude, longitude: surfspot.coordinates.longitude)
+                )
                 .ignoresSafeArea(edges: .top)
-                .frame(height: 300)
+                        .frame(height: 300)
             
             Circleimage(image: surfspot.image)
                 .offset(y: -130)
@@ -36,14 +38,14 @@ struct SpotDetail: View {
             }
             .padding()
             
-            Spacer()
-
             }
+        .navigationTitle(surfspot.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct SpotDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SpotDetail()
+        SpotDetail(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286)))
     }
 }
