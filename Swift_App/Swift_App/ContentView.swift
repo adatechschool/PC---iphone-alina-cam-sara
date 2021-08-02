@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var surfspot1 = Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286))
+    //var surfspot1 = Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286))
     
     var body: some View {
         ListView()
