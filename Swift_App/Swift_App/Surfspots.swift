@@ -11,8 +11,8 @@ import CoreLocation
 
 
 func readFile() {
-        if let url = Bundle.main.url(forResource: "Surfspots", withExtension: "json"),
-           let data = try? Data(contentsOf: url) {
+          let url = Bundle.main.url(forResource: "Surfspots", withExtension: "json")
+          let data = try? Data(contentsOf: url) {
           let decoder = JSONDecoder()
           let results = try! decoder.decode(bigObjectWithListOfSpots.self, from: data)
         }
@@ -22,7 +22,7 @@ struct bigObjectWithListOfSpots: Codable {
   var elementsOfBigObject: [Surfspot]
 }
 
-struct Surfspot : Identifiable, Codable, Hashable {
+struct Surfspot : Identifiable, Codable {
     var id: Int
     var name: String
     var city: String
