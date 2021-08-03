@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010BB8D726B94758004862BD /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010BB8D626B94758004862BD /* ModelData.swift */; };
 		01512A1226B2A3DD00F59DCA /* SpotRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01512A1126B2A3DD00F59DCA /* SpotRow.swift */; };
 		01512A1426B2B2F200F59DCA /* SpotDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01512A1326B2B2F100F59DCA /* SpotDetail.swift */; };
 		018157E726B000BC001B816B /* Swift_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018157E626B000BC001B816B /* Swift_App.swift */; };
@@ -20,13 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		010BB8D626B94758004862BD /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		01512A1126B2A3DD00F59DCA /* SpotRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRow.swift; sourceTree = "<group>"; };
 		01512A1326B2B2F100F59DCA /* SpotDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetail.swift; sourceTree = "<group>"; };
 		018157E326B000BB001B816B /* Swift_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018157E626B000BC001B816B /* Swift_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_App.swift; sourceTree = "<group>"; };
 		018157E826B000BC001B816B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		018157EA26B000C2001B816B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		018157EF26B000C2001B816B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C280EF26B0328500CBCA84 /* Circleimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circleimage.swift; sourceTree = "<group>"; };
 		01C280F126B035FA00CBCA84 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		01C280F326B0522200CBCA84 /* Surfspots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Surfspots.json; sourceTree = "<group>"; };
@@ -45,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010BB8D826B94C45004862BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				010BB8D626B94758004862BD /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		018157DA26B000BB001B816B = {
 			isa = PBXGroup;
 			children = (
@@ -72,19 +81,11 @@
 				01512A1126B2A3DD00F59DCA /* SpotRow.swift */,
 				01512A1326B2B2F100F59DCA /* SpotDetail.swift */,
 				018157EA26B000C2001B816B /* Assets.xcassets */,
-				018157EF26B000C2001B816B /* Info.plist */,
 				01C280F326B0522200CBCA84 /* Surfspots.json */,
 				01C280F526B0546B00CBCA84 /* Surfspots.swift */,
-				018157EC26B000C2001B816B /* Preview Content */,
+				010BB8D826B94C45004862BD /* Model */,
 			);
 			path = Swift_App;
-			sourceTree = "<group>";
-		};
-		018157EC26B000C2001B816B /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +159,7 @@
 			files = (
 				01C280F626B0546B00CBCA84 /* Surfspots.swift in Sources */,
 				018157E926B000BC001B816B /* ContentView.swift in Sources */,
+				010BB8D726B94758004862BD /* ModelData.swift in Sources */,
 				01C280F826B1A4EF00CBCA84 /* ListView.swift in Sources */,
 				01C280F226B035FA00CBCA84 /* MapView.swift in Sources */,
 				01512A1426B2B2F200F59DCA /* SpotDetail.swift in Sources */,
