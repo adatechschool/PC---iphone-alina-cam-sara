@@ -7,12 +7,13 @@
 
 import Foundation
 
+//METTRE SURFSPOTS ici
+
 //var landmarks: [SurfSpot] = load("Surfspots.json")
-var landmarks: Result = load("Surfspots.json")
+var surfspots: Result = load("Surfspots.json")
 
-func load<Result: Decodable>(_ filename: String) -> Result {
+func load< Result : Decodable>(_ filename: String) -> Result {
     let data: Data
-
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
     else {
         fatalError("Couldn't find \(filename) in main bundle.")
@@ -25,10 +26,11 @@ func load<Result: Decodable>(_ filename: String) -> Result {
        }
 
        do {
-           let decoder = JSONDecoder()
-           let results = try decoder.decode(Result.self, from: data)
+        let results = try JSONDecoder().decode(Result.self, from: data)
         
-           return results
+        let listOfSpots = results.records
+        
+        return listOfSpots
         
        } catch {
            fatalError("Couldn't parse \(filename) as \(Result.self):\n\(error)")
