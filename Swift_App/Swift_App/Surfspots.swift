@@ -11,12 +11,7 @@ import CoreLocation
 
  
 struct Result: Decodable {
-  var records: [SurfSpot]
-    
-    enum CodingKeys: String, CodingKey {
-          case records
-    }
-        
+  var records: [SurfSpot] 
 }
 
 struct SurfSpot : Decodable {
