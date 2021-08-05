@@ -14,16 +14,20 @@ struct SpotDetail: View {
     
     var body: some View {
         ScrollView {
-            MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.latitude, longitude: surfspot.longitude)
-                )
+            //MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.latitude, longitude: surfspot.longitude))
 
             MapView(coordinate: <#CLLocationCoordinate2D#>)
                 .ignoresSafeArea(edges: .top)
-                        .frame(height: 300)
+                    .frame(height: 300)
             
-            Circleimage(image: surfspot.photoURL)
+            URLImage(surfspot.photoURL!) { image in image
+                .clipShape(Circle())
+                .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                .shadow(radius: 7)
                 .offset(y: -130)
                 .padding(.bottom, -130)
+            }
+                
             
             VStack(alignment: .leading) {
                 Text(surfspot.name)

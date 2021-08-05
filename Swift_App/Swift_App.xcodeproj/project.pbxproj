@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,8 @@
 		018157E726B000BC001B816B /* Swift_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018157E626B000BC001B816B /* Swift_App.swift */; };
 		018157E926B000BC001B816B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018157E826B000BC001B816B /* ContentView.swift */; };
 		018157EB26B000C2001B816B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018157EA26B000C2001B816B /* Assets.xcassets */; };
-		01C280F026B0328500CBCA84 /* Circleimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C280EF26B0328500CBCA84 /* Circleimage.swift */; };
+		01AFADE226BC220700B6E73D /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 01AFADE126BC220700B6E73D /* URLImageStore */; };
+		01AFADE426BC220700B6E73D /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 01AFADE326BC220700B6E73D /* URLImage */; };
 		01C280F226B035FA00CBCA84 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C280F126B035FA00CBCA84 /* MapView.swift */; };
 		01C280F426B0522200CBCA84 /* Surfspots.json in Resources */ = {isa = PBXBuildFile; fileRef = 01C280F326B0522200CBCA84 /* Surfspots.json */; };
 		01C280F626B0546B00CBCA84 /* Surfspots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C280F526B0546B00CBCA84 /* Surfspots.swift */; };
@@ -28,7 +29,6 @@
 		018157E626B000BC001B816B /* Swift_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_App.swift; sourceTree = "<group>"; };
 		018157E826B000BC001B816B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		018157EA26B000C2001B816B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		01C280EF26B0328500CBCA84 /* Circleimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circleimage.swift; sourceTree = "<group>"; };
 		01C280F126B035FA00CBCA84 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		01C280F326B0522200CBCA84 /* Surfspots.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Surfspots.json; sourceTree = "<group>"; };
 		01C280F526B0546B00CBCA84 /* Surfspots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfspots.swift; sourceTree = "<group>"; };
@@ -40,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01AFADE426BC220700B6E73D /* URLImage in Frameworks */,
+				01AFADE226BC220700B6E73D /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +90,6 @@
 			children = (
 				01C280F726B1A4EF00CBCA84 /* ListView.swift */,
 				01C280F126B035FA00CBCA84 /* MapView.swift */,
-				01C280EF26B0328500CBCA84 /* Circleimage.swift */,
 				018157E826B000BC001B816B /* ContentView.swift */,
 				01512A1326B2B2F100F59DCA /* SpotDetail.swift */,
 				01512A1126B2A3DD00F59DCA /* SpotRow.swift */,
@@ -120,6 +121,10 @@
 			dependencies = (
 			);
 			name = Swift_App;
+			packageProductDependencies = (
+				01AFADE126BC220700B6E73D /* URLImageStore */,
+				01AFADE326BC220700B6E73D /* URLImage */,
+			);
 			productName = Swift_App;
 			productReference = 018157E326B000BB001B816B /* Swift_App.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 018157DA26B000BB001B816B;
+			packageReferences = (
+				01AFADE026BC220700B6E73D /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 018157E426B000BB001B816B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,7 +189,6 @@
 				01512A1426B2B2F200F59DCA /* SpotDetail.swift in Sources */,
 				01512A1226B2A3DD00F59DCA /* SpotRow.swift in Sources */,
 				018157E726B000BC001B816B /* Swift_App.swift in Sources */,
-				01C280F026B0328500CBCA84 /* Circleimage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +317,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Swift_App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Swift_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -331,7 +337,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Swift_App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Swift_App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -368,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01AFADE026BC220700B6E73D /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01AFADE126BC220700B6E73D /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01AFADE026BC220700B6E73D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		01AFADE326BC220700B6E73D /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01AFADE026BC220700B6E73D /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 018157DB26B000BB001B816B /* Project object */;
 }
