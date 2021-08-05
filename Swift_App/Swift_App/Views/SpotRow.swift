@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct SpotRow: View {
-    var surfspot: Surfspot
+    var surfspot: SurfSpot
 
     var body: some View {
         HStack {
-            surfspot.image
-                .resizable()
-                .frame(width: 50, height: 50)
             Text(surfspot.name)
                 
             Spacer()
+        }
+        URLImage(surfspot.photoURL!) { image in image
+            .resizable()
+            .frame(width: 50, height: 50)
         }
         
     }
@@ -26,7 +28,8 @@ struct SpotRow: View {
 struct SpotRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SpotRow(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286)))
+            SpotRow(surfspot: surfspots[0])
+            SpotRow(surfspot: surfspots[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

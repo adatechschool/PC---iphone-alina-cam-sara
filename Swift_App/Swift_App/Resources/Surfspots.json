@@ -1,0 +1,26 @@
+{
+    "records": [{
+            "id": 1,
+            "Surf Break": "Wild Waves",
+            "City": "Santa Barbara",
+            "Country": "California, USA",
+            "Coordinates": {
+                        "longitude": -116.166868,
+                        "latitude": 34.011286
+                    },
+            "Photos": "<https://dl.airtable.com/ZuXJZ2NnTF40kCdBfTld_thomas-ashlock-64485-unsplash.jpg>"
+        {
+            "id": 2,
+            "Surf Break": "Palm Rocks",
+            "City": "Maui",
+            "Country": "Hawai, USA",
+            "Coordinates": {
+                        "longitude":
+                            -156.331.925,
+                        "latitude":
+                            20.798.363
+                    },
+            "Photos": "<https://dl.airtable.com/e3QoP3cFSyykZJOvWGIy_cesar-couto-477018-unsplash%20(1).jpg>",
+        }
+    ]
+}

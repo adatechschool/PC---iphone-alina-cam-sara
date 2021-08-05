@@ -7,18 +7,21 @@
 
 import SwiftUI
 import CoreLocation
+import URLImage
 
 struct SpotDetail: View {
-    var surfspot: Surfspot
+    var surfspot: SurfSpot
     
     var body: some View {
         ScrollView {
-            MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.coordinates.latitude, longitude: surfspot.coordinates.longitude)
+            MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.latitude, longitude: surfspot.longitude)
                 )
+
+            MapView(coordinate: <#CLLocationCoordinate2D#>)
                 .ignoresSafeArea(edges: .top)
                         .frame(height: 300)
             
-            Circleimage(image: surfspot.image)
+            Circleimage(image: surfspot.photoURL)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
@@ -46,6 +49,6 @@ struct SpotDetail: View {
 
 struct SpotDetail_Previews: PreviewProvider {
     static var previews: some View {
-        SpotDetail(surfspot: Surfspot(id: 1, name: "Wild Waves", city: "Santa Barbara", country: "California, USA", imageName: "wildwaves", coordinates: Surfspot.Coordinates(longitude: -116.166868, latitude: 34.011286)))
+        SpotDetail(surfspot: surfspots[0])
     }
 }
