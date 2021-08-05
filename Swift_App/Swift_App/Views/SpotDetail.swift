@@ -15,8 +15,9 @@ struct SpotDetail: View {
     var body: some View {
         ScrollView {
             //MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.latitude, longitude: surfspot.longitude))
-
-            MapView(coordinate: <#CLLocationCoordinate2D#>)
+            //        MapView(coordinate: CLLocationCoordinate2D(latitude: surfspot.coordinates.latitude, longitude: surfspot.coordinates.longitude)
+)
+            MapView(coordinate: ÷÷)
                 .ignoresSafeArea(edges: .top)
                     .frame(height: 300)
             
